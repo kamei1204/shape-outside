@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    background: #000;
+}
+section {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+}
+.circle {
+    position: relative;
+    overflow: hidden;
+}
+.circle.circle1 {
+    width: 500px;
+    height: 500px;
+    float: left;
+    border-radius: 50%;
+    margin: 20px;
+    /* shape-outsideプロパティは、フロート要素への回り込みの形状を指定する際に使用します。
+    一般的には、テキストを円、楕円、多角形のような図形の外側に回り込ませるなどのスタイルが想定されます。
+
+    shape-outsideプロパティは、フロート要素に対して有効となります。 
+    shape-outsideプロパティを指定する要素には、同時にfloatプロパティの値に left または right を指定する必要があります。 */
+    shape-outside: circle();
+}
+.circle.circle2 {
+    width: 300px;
+    height: 300px;
+    float: right;
+    border-radius: 50%;
+    margin: 20px;
+    shape-outside: circle();
+}
+.circle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+section p {
+    color: #fff;
+}
